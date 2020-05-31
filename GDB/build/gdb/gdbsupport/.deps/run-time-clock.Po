@@ -1,0 +1,117 @@
+gdbsupport/run-time-clock.o: \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/run-time-clock.c \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-defs.h \
+  config.h ../gnulib/import/../../gnulib/config.h \
+  ../gnulib/import/stdio.h ../gnulib/import/stdlib.h \
+  ../gnulib/import/stdint.h ../gnulib/import/string.h \
+  ../gnulib/import/alloca.h ../gnulib/import/time.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/ansidecl.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/libiberty.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/../gnulib/import/pathmax.h \
+  ../gnulib/import/unistd.h ../gnulib/import/limits.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/gdb/signals.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/gdb/signals.def \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_locale.h \
+  /usr/local/include/libintl.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/ptid.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-types.h \
+  ../bfd/bfd.h /Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/symcat.h \
+  ../bfd/bfd_stdint.h ../gnulib/import/sys/types.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/diagnostics.h \
+  ../gnulib/import/sys/stat.h ../gnulib/import/inttypes.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-utils.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/poison.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/traits.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/obstack.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_string_view.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_assert.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/errors.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_string_view.tcc \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/print-utils.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-debug.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/cleanups.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-exceptions.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_unique_ptr.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/run-time-clock.h
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-defs.h:
+
+config.h:
+
+../gnulib/import/../../gnulib/config.h:
+
+../gnulib/import/stdio.h:
+
+../gnulib/import/stdlib.h:
+
+../gnulib/import/stdint.h:
+
+../gnulib/import/string.h:
+
+../gnulib/import/alloca.h:
+
+../gnulib/import/time.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/ansidecl.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/libiberty.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../gnulib/import/pathmax.h:
+
+../gnulib/import/unistd.h:
+
+../gnulib/import/limits.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/gdb/signals.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/gdb/signals.def:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_locale.h:
+
+/usr/local/include/libintl.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/ptid.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-types.h:
+
+../bfd/bfd.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/symcat.h:
+
+../bfd/bfd_stdint.h:
+
+../gnulib/import/sys/types.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/diagnostics.h:
+
+../gnulib/import/sys/stat.h:
+
+../gnulib/import/inttypes.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-utils.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/poison.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/traits.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/../include/obstack.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_string_view.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_assert.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/errors.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_string_view.tcc:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/print-utils.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-debug.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/cleanups.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/common-exceptions.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/gdb_unique_ptr.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/run-time-clock.h:

@@ -1,0 +1,12 @@
+# This file records the configuration of libintl in a form that
+# can be read back in by a configure script in a sister directory.
+# See config/gettext.m4 for its use.
+
+USE_NLS='yes'
+LIBINTL='-L/usr/local/lib -lintl'
+LIBINTL_DEP=''
+INCINTL=''
+
+XGETTEXT='/Users/yasuyuki/anaconda3/bin/xgettext'
+GMSGFMT='/Users/yasuyuki/anaconda3/bin/msgfmt'
+POSUB='po'

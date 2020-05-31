@@ -1,0 +1,4 @@
+version.o: version.c \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/version.h
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/gdbsupport/version.h:

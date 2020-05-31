@@ -1,0 +1,19 @@
+stripslash.o: \
+  /Users/yasuyuki/Downloads/gdb-9.1/gnulib/import/stripslash.c \
+  ../config.h /Users/yasuyuki/Downloads/gdb-9.1/gnulib/import/dirname.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include/stdbool.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include/__stddef_max_align_t.h \
+  /Users/yasuyuki/Downloads/gdb-9.1/gnulib/import/dosname.h
+
+../config.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gnulib/import/dirname.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include/stdbool.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include/stddef.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include/__stddef_max_align_t.h:
+
+/Users/yasuyuki/Downloads/gdb-9.1/gnulib/import/dosname.h:

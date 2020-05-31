@@ -1,0 +1,4 @@
+xml-builtin.o: xml-builtin.c \
+  /Users/yasuyuki/Downloads/gdb-9.1/gdb/xml-builtin.h
+
+/Users/yasuyuki/Downloads/gdb-9.1/gdb/xml-builtin.h:
