@@ -79,13 +79,9 @@ next:
 ; 読み終わったのでharibote.sysを実行だ！
 
 		MOV		[0x0ff0],BYTE CH		; IPLがどこまで読んだのかをメモ
-;		JMP		0xc200
 
 		MOV		BYTE [0x0ff1],0x0b	; 進捗チェック用フラグ
-		MOV		BYTE [0x0ff2],0x0c	; 進捗チェック用フラグ
-		MOV		BYTE [0x0ff3],0x0d	; 進捗チェック用フラグ
 
-;		JMP		0xc330
 		JMP		0xc200
 
 error:

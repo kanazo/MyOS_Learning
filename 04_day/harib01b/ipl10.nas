@@ -26,7 +26,8 @@ CYLS	EQU		10				; どこまで読み込むか
 		DD		0xffffffff		; たぶんボリュームシリアル番号
 		DB		"HARIBOTEOS "	; ディスクの名前（11バイト）
 		DB		"FAT12   "		; フォーマットの名前（8バイト）
-		RESB	18				; とりあえず18バイトあけておく
+;		RESB	18				; とりあえず18バイトあけておく
+		TIMES 18 DB 0
 
 ; プログラム本体
 
@@ -77,7 +78,10 @@ next:
 
 ; 読み終わったのでharibote.sysを実行だ！
 
-		MOV		[0x0ff0],CH		; IPLがどこまで読んだのかをメモ
+		MOV		[0x0ff0],BYTE CH		; IPLがどこまで読んだのかをメモ
+
+		MOV		BYTE [0x0ff1],0x0b	; 進捗チェック用フラグ
+
 		JMP		0xc200
 
 error:
@@ -100,6 +104,7 @@ msg:
 		DB		0x0a			; 改行
 		DB		0
 
-		RESB	0x7dfe-$		; 0x7dfeまでを0x00で埋める命令
+;		RESB	0x7dfe-$		; 0x7dfeまでを0x00で埋める命令
+		TIMES 0x1fe-($-$$) DB 0
 
 		DB		0x55, 0xaa

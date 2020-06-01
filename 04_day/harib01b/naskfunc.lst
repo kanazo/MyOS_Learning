@@ -1,0 +1,32 @@
+     1                                  ; naskfunc
+     2                                  ; TAB=4
+     3                                  
+     4                                  ;[FORMAT "WCOFF"]				; オブジェクトファイルを作るモード ; NASMではエラーが出るのでこの行削除
+     5                                  ;[INSTRSET "i486p"]                              ; 486の命令まで使いたいという記述
+     6                                  [BITS 32]						; 32ビットモード用の機械語を作らせる
+     7                                  
+     8                                  
+     9                                  ; オブジェクトファイルのための情報
+    10                                  
+    11                                  ;[FILE "naskfunc.nas"]			; ソースファイル名情報 ; NASMではエラーが出るのでこの行削除
+    12                                  
+    13                                  		;GLOBAL	_io_hlt,write_mem8		; このプログラムに含まれる関数名
+    14                                  		GLOBAL	io_hlt,write_mem8		; NASMではエラーが出るので修正
+    15                                  
+    16                                  
+    17                                  ; 以下は実際の関数
+    18                                  
+    19                                  [SECTION .text]		; オブジェクトファイルではこれを書いてからプログラムを書く
+    20                                  
+    21                                  ;_io_hlt:	; void io_hlt(void);
+    22                                  io_hlt:	; void io_hlt(void);	; NASMではエラーが出るので修正
+    23 00000000 F4                      		HLT
+    24 00000001 C3                      		RET
+    25                                  
+    26                                  ;_write_mem8:    ; void write_mem8(int addr, int data);
+    27                                  write_mem8:    ; void write_mem8(int addr, int data);	; NASMではエラーが出るので修正
+    28 00000002 8B4C2404                                MOV             ECX,[ESP+4]             ; [ESP+4]にaddrが入っているのでそれをECXに読み込む
+    29 00000006 8A442408                                MOV             AL,[ESP+8]              ; [ESP+8]にdataが入っているのでそれをALに読み込む
+    30 0000000A 8801                                    MOV             [ECX],AL
+    31 0000000C C3                                      RET    
+    32                                  

@@ -17,10 +17,13 @@ VRAM	EQU		0x0ff8			; グラフィックバッファの開始番地
 
 ; 画面モードを設定
 
+		MOV		BYTE [0x0ff2], 0x0b	; 進み具合テスト1
+
 		MOV		AL,0x13			; VGAグラフィックス、320x200x8bitカラー
 		MOV		AH,0x00
 		INT		0x10
-		MOV		BYTE [VMODE],8	; 画面モードをメモする（C言語が参照する）
+;		MOV		BYTE [VMODE],8	; 画面モードをメモする（C言語が参照する）
+		MOV		WORD [VMODE],8	; 画面モードをメモする（C言語が参照する）
 		MOV		WORD [SCRNX],320
 		MOV		WORD [SCRNY],200
 		MOV		DWORD [VRAM],0x000a0000
@@ -43,6 +46,8 @@ VRAM	EQU		0x0ff8			; グラフィックバッファの開始番地
 
 		CLI						; さらにCPUレベルでも割り込み禁止
 
+		MOV		WORD [0x0ff4], 0x000d  	; 進み具合テスト2
+
 ; CPUから1MB以上のメモリにアクセスできるように、A20GATEを設定
 
 		CALL	waitkbdout
@@ -55,7 +60,9 @@ VRAM	EQU		0x0ff8			; グラフィックバッファの開始番地
 
 ; プロテクトモード移行
 
-[INSTRSET "i486p"]				; 486の命令まで使いたいという記述
+;		MOV		BYTE [0x0ff3], 0xf3  	; 進み具合テスト3
+
+;[INSTRSET "i486p"]				; 486の命令まで使いたいという記述
 
 		LGDT	[GDTR0]			; 暫定GDTを設定
 		MOV		EAX,CR0
@@ -80,12 +87,16 @@ pipelineflush:
 
 ; ついでにディスクデータも本来の位置へ転送
 
+;		MOV		BYTE [0x0ff4], 0xf4  	; 進み具合テスト4
+
 ; まずはブートセクタから
 
 		MOV		ESI,0x7c00		; 転送元
 		MOV		EDI,DSKCAC		; 転送先
 		MOV		ECX,512/4
 		CALL	memcpy
+
+;		MOV		BYTE [0x0ff5], 0xf5  	; 進み具合テスト5
 
 ; 残り全部
 
@@ -99,6 +110,8 @@ pipelineflush:
 
 ; asmheadでしなければいけないことは全部し終わったので、
 ;	あとはbootpackに任せる
+
+;		MOV		BYTE [0x0ff6], 0xf6  	; 進み具合テスト6
 
 ; bootpackの起動
 
@@ -114,6 +127,8 @@ pipelineflush:
 skip:
 		MOV		ESP,[EBX+12]	; スタック初期値
 		JMP		DWORD 2*8:0x0000001b
+
+;		MOV		BYTE [0x0ff7], 0xf7  	; 進み具合テスト7
 
 waitkbdout:
 		IN		 AL,0x64
@@ -131,9 +146,13 @@ memcpy:
 		RET
 ; memcpyはアドレスサイズプリフィクスを入れ忘れなければ、ストリング命令でも書ける
 
-		ALIGNB	16
+;		MOV		BYTE [0x0ff8], 0xf8  	; 進み具合テスト8
+
+;		ALIGNB	16
+		ALIGNB	16, DB 0
 GDT0:
-		RESB	8				; ヌルセレクタ
+;		RESB	8				; ヌルセレクタ
+		TIMES 8 DB 0
 		DW		0xffff,0x0000,0x9200,0x00cf	; 読み書き可能セグメント32bit
 		DW		0xffff,0x0000,0x9a28,0x0047	; 実行可能セグメント32bit（bootpack用）
 
@@ -142,5 +161,6 @@ GDTR0:
 		DW		8*3-1
 		DD		GDT0
 
-		ALIGNB	16
+;		ALIGNB	16
+		ALIGNB	16, DB 0
 bootpack:
